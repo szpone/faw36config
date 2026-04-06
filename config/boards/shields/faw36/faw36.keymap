@@ -33,23 +33,23 @@
  * |------+------+------+------+------|        |------+------+------+------+------|
  * |   Z  |   X  |   C  |   V  |   B  |        |   N  |   M  |   ,  |   .  |   /  |
  * `-------------+------+------+------|        |------+------+------+-------------'
- *               |F_SYM |F_NUM | Space|        | Bspc |F_ARR |F_MED |
+ *               |F_SYM |F_NUM | Space|        | Bspc |LAYER1 |F_MED |
  *               `--------------------'        `--------------------'
  */
                         bindings = <
     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y    &kp U      &kp I          &kp O         &kp P
     &lt NAV A   &kp S       &kp D       &kp F       &kp G       &kp H    &kp J      &kp K          &kp L         &kp SEMI
     &mt LSHFT Z &mt LCTRL X &mt LGUI C  &mt LALT V  &kp B       &kp N    &mt RALT M &mt RGUI COMMA &mt RCTRL DOT &mt RSHFT FSLH
-                            &lt SYM ESC &lt NUM TAB &kp SPACE   &kp BSPC &mo ARROWS &lt MEDIA RET
+                            &lt SYM ESC &lt NUM TAB &kp SPACE   &kp BSPC &mo 1 &lt MEDIA RET
                 >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
         num_layer {
 /* Numbers
  * ,----------------------------------.        ,----------------------------------.
- * |   0  |   7  |   8  |   9  |RESET |        |  F1  |  F2  |  F3  |  F4  |  F5  |
+ * |   0  |   7  |   8  |   9  |RESET |        |  ALT  |  CTRL  |  F3  |  F4  |  F5  |
  * |------+------+------+------+------|        |------+------+------+------+------|
- * |      |   4  |   5  |   6  |   =  |        |  F6  |  F7  |  F8  |  F9  |  F10 |
+ * |      |   4  |   5  |   6  |   =  |        |  LSHFT |  F7  |  F8  |  F9  |  F10 |
  * |------+------+------+------+------|        |------+------+------+------+------|
  * |      |   1  |   2  |   3  |   -  |        |  F11 | AF12 |      |      |      |
  * `-------------+------+------+------|        |------+------+------+-------------'
@@ -57,8 +57,8 @@
  *               `--------------------'        `--------------------'
 */
                         bindings = <
-    &kp N0 &kp N7 &kp N8  &kp N9 &kp EQUAL      &kp F1  &kp F2       &kp F3 &kp F4 &kp F5
-    &trans &kp N4 &kp N5  &kp N6 &kp EQUAL   &kp F6  &kp F7       &kp F8 &kp F9 &kp F10
+    &kp N0 &kp N7 &kp N8  &kp N9 &kp EQUAL      &kp LCTRL  &kp RALT       &kp F3 &kp F4 &kp F5
+    &trans &kp N4 &kp N5  &kp N6 &kp EQUAL   &kp LSHFT  &kp F7       &kp F8 &kp F9 &kp F10
     &trans &kp N1 &kp N2  &kp N3 &kp MINUS   &kp F11 &mt RALT F12 &trans &trans &trans
                   &kp DOT &trans &trans      &trans  &trans &trans
                 >;
