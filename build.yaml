@@ -17,4 +17,4 @@ include:
   - board: seeeduino_xiao_ble
     shield: faw36_left
   - board: seeeduino_xiao_ble
-    shield: faw36_rightt
+    shield: faw36_right
