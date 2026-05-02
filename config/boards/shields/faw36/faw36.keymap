@@ -37,10 +37,10 @@
  *               `--------------------'        `--------------------'
  */
                         bindings = <
-    &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y    &kp U      &kp I          &kp O         &kp P
+    &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y    &kp U      &kp I  &kp O &kp P
     &lt NAV A   &kp S       &kp D       &kp F       &kp G       &kp H    &kp J      &kp K          &kp L         &kp SEMI
     &mt LSHFT Z &kp X &kp C &kp V  &kp B       &kp N    &kp COMMA &kp PERIOD &kp FSLH
-                            &kp LMETA &kp LCTRL &lt SPACE 1   &kp RET &lt BACKSPACE 2 &kp RALT
+                            &kp LMETA &kp LCTRL &lt 1 SPACE   &kp RET &lt 2 BACKSPACE &kp RALT
                 >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
@@ -58,7 +58,10 @@
 */
                         bindings = <
     &kp N1 &kp N2 &kp N3  &kp N4 &kp 5      &kp 6  &kp 7       &kp 8 &kp 9 &kp 0
-    &trans &kp N4 &kp N5  &kp N6 &kp EQUAL   &kp LEFT  &kp DOWN       &kp UP &kp RIGHT &kp F10
+    &trans &kp N4 &kp N5  &kp N6 &kp EQUAL   &kp LEFT  &kp DOWN       &kp UP &kp RIGHT
+
+
+p&kp F10
     &trans &kp N1 &kp N2  &kp N3 &kp MINUS   &kp F11 &mt RALT F12 &trans &trans &trans
                   &kp DOT &trans &trans      &trans  &trans &trans
                 >;
