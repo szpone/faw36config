@@ -20,7 +20,7 @@
     flavor = "tap-preferred";
 };
 
-{
+/ {
         combos {
                 compatible = "zmk,combos";
                 combo_tab {
@@ -31,10 +31,10 @@
                 combo_tab {
                         timeout-ms = <50>;
                         key-positions = <8 9>;
-                        bindings = <&kp ESC>
-                }
-        }
-}
+                        bindings = <&kp ESC>;
+                };
+        };
+};
 
 / {
     keymap {
