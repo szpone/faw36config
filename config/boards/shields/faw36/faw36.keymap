@@ -20,6 +20,22 @@
     flavor = "tap-preferred";
 };
 
+{
+        combos {
+                compatible = "zmk,combos";
+                combo_tab {
+                        timeout-ms = <50>;
+                        key-positions = <0 1>;
+                        bindings = <&kp TAB>;
+                };
+                combo_tab {
+                        timeout-ms = <50>;
+                        key-positions = <8 9>;
+                        bindings = <&kp ESC>
+                }
+        }
+}
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -47,7 +63,7 @@
         num_layer {
 /* Numbers
  * ,----------------------------------.        ,----------------------------------.
- * |   1  |   2  |   3  |   4  |5 |        |  6  |  7 |  8  | 9  |  10j  |
+ * |   1  |   2  |   3  |   4  |5 |        |  6  |  7 |  8  | 9  |  0  |
  * |------+------+------+------+------|        |------+------+------+------+------|
  * |      |   4  |   5  |   6  |   =  |        |  LSHFT |  F7  |  F8  |  F9  |  F10 |
  * |------+------+------+------+------|        |------+------+------+------+------|
@@ -57,16 +73,16 @@
  *               `--------------------'        `--------------------'
 */
                         bindings = <
-    &kp N1 &kp N2 &kp N3  &kp N4 &kp 5      &kp 6  &kp 7       &kp 8 &kp 9 &kp 0
-    &trans &kp N4 &kp N5  &kp N6 &kp EQUAL   &kp LEFT  &kp DOWN       &kp UP &kp RIGHT &kp F10
-    &trans &kp N1 &kp N2  &kp N3 &kp MINUS   &kp F11 &mt RALT F12 &trans &trans &trans
-                  &kp DOT &trans &trans      &trans  &trans &trans
+    &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp 6  &kp 7  &kp 8 &kp 9 &kp 0
+    &trans &trans &trans  &trans &trans     &kp LEFT &kp DOWN   &kp UP &kp RIGHT &kp SQT
+    &trans &trans &trans  &trans &trans     &trans &trans &trans &trans &trans
+                  &kp DOT &trans &trans    &trans  &trans &trans
                 >;
         };
         sym_layer {
 /* Symbols
  * ,----------------------------------.        ,----------------------------------.
- * |   `  |      |   _  |   +  |   \  |        |      |      |      |      |      |
+ * |   !  |   @   |  # |   $  |   %  |        |   ^   | &     | *     |  ()     |      |
  * |------+------+------+------+------|        |------+------+------+------+------|
  * |   {  |   }  |   -  |   =  |      |        |      |      |      |      |      |
  * |------+------+------+------+------|        |------+------+------+------+------|
@@ -76,9 +92,9 @@
  *               `--------------------'        `--------------------'
  */
                         bindings = <
-    &kp GRAVE  &trans   &kp UNDER &kp PLUS  &kp BSLH   &trans &trans &trans &trans &trans
-    &kp LBRC   &kp RBRC &kp MINUS &kp EQUAL &trans     &trans &trans &trans &trans &trans
-    &kp LBKT   &kp RBKT &kp LPAR  &kp RPAR  &trans     &trans &trans &trans &trans &trans
+    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
+    &trans   &trans &trans &trans &trans         &kp MINUS &kp EQUAL &kp LBKT &kp RBLT &kp GRAVE
+    &trans   &trans &trans  &trans  &trans     &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp PIPE
                         &trans    &trans    &trans     &trans &trans &trans
                 >;
         };
