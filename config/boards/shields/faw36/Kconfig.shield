@@ -6,3 +6,4 @@ config SHIELD_FAW36_LEFT
 
 config SHIELD_FAW36_RIGHT
 	def_bool $(shields_list_contains,faw36_right)
+        
